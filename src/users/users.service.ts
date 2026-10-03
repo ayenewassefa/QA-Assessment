@@ -35,8 +35,7 @@ export class UsersService {
         return {
           statusCode: HttpStatus.CREATED,
           message: 'User created successfully',
-          data: { ...dto, id: 0, transactions: [] } as User,
-        };
+data: { ...dto, id: 0, transactions: [] } as unknown as User,        };
       }
       throw new HttpException(
         {
